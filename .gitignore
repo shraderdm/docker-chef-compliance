@@ -1,0 +1,4 @@
+# avoid adding .deb during development
+*.deb
+# some temporary dev files
+contrib
