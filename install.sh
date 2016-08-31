@@ -1,8 +1,8 @@
 #!/bin/sh
 set -e -x
 
-SERVER_VERSION="1.3.1-1"
-SERVER_SHA1="5ed4fc0daa7ad10f7f6f72ddf8307a19e1f4e762" # v1.3.1
+SERVER_VERSION="1.4.10-1"
+SERVER_SHA1="56b7782d56aec0a164eae6928f1ff33e2c6a957d"
 PACKAGE_NAME="chef-compliance_${SERVER_VERSION}_amd64.deb"
 
 # Temporary work dir
@@ -15,8 +15,8 @@ apt-get update -q --yes
 apt-get install -q --yes logrotate vim-nox hardlink wget ca-certificates
 
 # Download and install Chef's packages
-wget -nv https://packages.chef.io/stable/ubuntu/14.04/${PACKAGE_NAME}
-# mv /tmp/chef-compliance_1.3.1-1_amd64.deb
+wget -nv https://packages.chef.io/stable/ubuntu/16.04/${PACKAGE_NAME}
+# mv /tmp/chef-compliance_1.4.10-1_amd64.deb .
 
 sha1sum -c - <<EOF
 ${SERVER_SHA1} ${PACKAGE_NAME}
