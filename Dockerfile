@@ -1,6 +1,6 @@
 # -*- conf -*-
 
-FROM ubuntu:14.04
+FROM rhel7:latest
 MAINTAINER Jörg Herzinger <joerg.herzinger@bytesource.net>
 
 EXPOSE 80 443
